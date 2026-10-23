@@ -14,7 +14,7 @@ app.post('/v1/chat/completions', async (req, res) => {
                 'Authorization': `Bearer ${process.env.GROQ_API_KEY}`
             },
             body: JSON.stringify({
-                model: "llama-3.3-70b-versatile",
+                model: "llama-3.3-70b-specdec",
                 messages: req.body.messages,
                 temperature: req.body.temperature || 0.7,
                 max_tokens: req.body.max_tokens || 1024,
